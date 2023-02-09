@@ -39,18 +39,10 @@ def track_particle_movement_user_input():
     return mass, initial_velocity, initial_position, time_step, num_steps
 
 
-def main():
+def example():
     particle_data = track_particle_movement_user_input()
+    # example data
     mass, initial_velocity, initial_position, time_step, num_steps = particle_data
     particle_trail = track_particle_movement(mass, initial_velocity, initial_position, time_step, num_steps)
     print(particle_trail)
-
-        
-        
-if __name__ == '__main__':
-    main()
-    
-    
-
-        
 
