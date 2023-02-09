@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ApiSubmission from './ApiSubmission';
+import ResultDisplay from './ResultDisplay';
 
 const App = () => {
   // useState hook to initialize the mass with a value of 1 and a state variable to track changes to it.
@@ -33,6 +35,16 @@ const App = () => {
     newPosition[index] = Number(event.target.value);
     // Update the position state with the updated position array
     setPosition(newPosition);
+  };
+
+  //handlers and variables for api submission result (lagrange output)
+  const [result, setResult] = useState(null);
+  const handleResult = (apiResult) => {
+    setResult(apiResult);
+  };
+
+  const updateResult = (result) => {
+    this.setState({ result });
   };
 
   return (
@@ -103,6 +115,9 @@ const App = () => {
         Velocity: [{velocity.join(", ")}]
         <br />
         Position: [{position.join(", ")}]
+        <br />
+        Lagrange: {"place holder lolz"}
+        <br />
       </p>
     </div>
   );

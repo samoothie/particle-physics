@@ -5,6 +5,13 @@ import methods
 
 # Create a Flask application object
 app = Flask(__name__)
+# Import the Flask module and other required modules
+#Ensure your interpreter is conda (base) with cmd-shift-p
+from flask import Flask, request, jsonify
+import methods
+
+# Create a Flask application object
+app = Flask(__name__)
 
 # Define a route for the API endpoint
 @app.route("/lagrange", methods=["POST"])
