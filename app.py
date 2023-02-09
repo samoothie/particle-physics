@@ -1,4 +1,5 @@
 # Import the Flask module and other required modules
+#Ensure your interpreter is conda (base) with cmd-shift-p
 from flask import Flask, request, jsonify
 import methods
 
